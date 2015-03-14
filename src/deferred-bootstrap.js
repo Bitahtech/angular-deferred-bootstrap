@@ -170,6 +170,8 @@ function bootstrap (configParam) {
   return $q.all(promises).then(handleResults, handleError);
 }
 
+angular.deferredBootstrap = bootstrap;
+
 window.deferredBootstrapper = {
   bootstrap: bootstrap
 };
